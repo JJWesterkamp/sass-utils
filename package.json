@@ -1,6 +1,6 @@
 {
   "name": "@jjwesterkamp/sass-utils",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Generic Sass utilities for web projects.",
   "main": "index.js",
   "scripts": {
