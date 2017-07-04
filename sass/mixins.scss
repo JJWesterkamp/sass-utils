@@ -1,0 +1,119 @@
+@mixin absoluteBlockPseudo ($pseudo, $parentPosition: relative) {
+
+  @if $parentPosition != false {
+    position: $parentPosition;
+  }
+
+  &::#{$pseudo} {
+    position: absolute;
+    display: block;
+    content: '';
+    @content;
+  }
+}
+
+@mixin squarePseudo(
+  $square-size,
+  $pseudo: after
+) {
+
+  width: $square-size;
+
+  &::#{$pseudo} {
+    content: '';
+    display: block;
+    width: 100%;
+    pointer-events: none;
+    padding-top: 100%;
+  }
+}
+
+@mixin centered-cover-background()
+{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin centered-contain-background()
+{
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@mixin centered-flex-row(
+  $justify-content: center,
+  $align-items: center,
+  $wrap: nowrap,
+  $display: flex,
+  $children-display: block
+) {
+  display: $display;
+  flex-wrap: $wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+
+  @if $children-display != false {
+    > * {
+      display: $children-display;
+    }
+  }
+}
+
+@mixin centered-flex-column($justify-content: center, $align-items: center, $wrap: nowrap)
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: $wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+
+  // IE fix:
+  > * {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@mixin absolute-overlay($useMinHeight: false)
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @if $useMinHeight == true {
+    min-height: 100%;
+  }
+
+  @if $useMinHeight == false {
+    height: 100%;
+  }
+}
+
+@mixin ellipsis ($display: block, $width: 100%)
+{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: $display;
+  width: $width;
+}
+
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+    color: $color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: $color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: $color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: $color;
+  }
+}

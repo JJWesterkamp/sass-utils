@@ -1,0 +1,27 @@
+{
+  "name": "@jjwesterkamp/sass-utils",
+  "version": "1.0.0",
+  "description": "Generic Sass utilities for web projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JJWesterkamp/sass-utils.git"
+  },
+  "keywords": [
+    "Sass",
+    "mixins",
+    "utilities",
+    "library",
+    "checkbox",
+    "radiobutton"
+  ],
+  "author": "Jeffrey Westerkamp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JJWesterkamp/sass-utils/issues"
+  },
+  "homepage": "https://github.com/JJWesterkamp/sass-utils#readme"
+}
