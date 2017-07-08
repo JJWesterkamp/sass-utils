@@ -1,18 +1,18 @@
-@mixin absoluteBlockPseudo ($pseudo, $parentPosition: relative) {
+@mixin absolute-block-pseudo ($pseudo, $parent-position: relative) {
 
-  @if $parentPosition != false {
-    position: $parentPosition;
+  @if $parent-position != false {
+    position: $parent-position;
   }
 
   &::#{$pseudo} {
     position: absolute;
     display: block;
-    content: '';
+    content: "";
     @content;
   }
 }
 
-@mixin squarePseudo(
+@mixin square-pseudo(
   $square-size,
   $pseudo: after
 ) {
@@ -20,7 +20,7 @@
   width: $square-size;
 
   &::#{$pseudo} {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     pointer-events: none;
@@ -28,15 +28,13 @@
   }
 }
 
-@mixin centered-cover-background()
-{
+@mixin centered-cover-background() {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-@mixin centered-contain-background()
-{
+@mixin centered-contain-background() {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -61,8 +59,7 @@
   }
 }
 
-@mixin centered-flex-column($justify-content: center, $align-items: center, $wrap: nowrap)
-{
+@mixin centered-flex-column($justify-content: center, $align-items: center, $wrap: nowrap) {
   display: flex;
   flex-direction: column;
   flex-wrap: $wrap;
@@ -77,24 +74,22 @@
   }
 }
 
-@mixin absolute-overlay($useMinHeight: false)
-{
+@mixin absolute-overlay($use-min-height: false) {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 
-  @if $useMinHeight == true {
+  @if $use-min-height == true {
     min-height: 100%;
   }
 
-  @if $useMinHeight == false {
+  @if $use-min-height == false {
     height: 100%;
   }
 }
 
-@mixin ellipsis ($display: block, $width: 100%)
-{
+@mixin ellipsis ($display: block, $width: 100%) {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -104,16 +99,19 @@
 
 
 @mixin placeholder-color($color) {
-  &::-webkit-input-placeholder { /* WebKit browsers */
+  &::-webkit-input-placeholder {
     color: $color;
   }
-  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+
+  &:-moz-placeholder {
     color: $color;
   }
-  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+
+  &::-moz-placeholder {
     color: $color;
   }
-  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+
+  &:-ms-input-placeholder {
     color: $color;
   }
 }
