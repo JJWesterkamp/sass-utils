@@ -1,7 +1,7 @@
 {
   "name": "@jjwesterkamp/sass-utils",
   "version": "2.0.0",
-  "description": "Generic Sass utilities for web projects.",
+  "description": "Generic SCSS function- & mixin-utilities for web projects.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
