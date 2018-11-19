@@ -1,0 +1,18 @@
+// ---------------------------------------------------------------
+// Variables required by this package.
+// ---------------------------------------------------------------
+
+// To override variables, simply define them before importing the
+// utilities of this package.
+
+
+// The global font-size that is used for rem-based calculations.
+$rem-base: 16px !default;
+
+// Z-index aliases for the z-index() mixin. Define your own aliases
+// such as 'fixed-header' or 'modal' to have a clear overview of
+// the z-index stacking of UI elements.
+$z-indices: (
+    max: 10000,
+    min:     1,
+) !default;

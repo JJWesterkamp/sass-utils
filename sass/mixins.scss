@@ -1,3 +1,5 @@
+@import 'variables';
+
 @mixin absolute-block-pseudo ($pseudo, $parent-position: relative) {
 
   @if $parent-position != false {
@@ -97,8 +99,8 @@
   width: $width;
 }
 
-
 @mixin placeholder-color($color) {
+
   &::-webkit-input-placeholder {
     color: $color;
   }
@@ -114,4 +116,21 @@
   &:-ms-input-placeholder {
     color: $color;
   }
+}
+
+@mixin autofill-style($background-color, $text-color: null) {
+
+  &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 1000px $background-color inset;
+
+      @if $text-color != null {
+        color: $text-color;
+      }
+
+      @content;
+  }
+}
+
+@mixin z-index($name) {
+  z-index: map-get($z-indices, $name);
 }
