@@ -99,22 +99,27 @@
   width: $width;
 }
 
+
 @mixin placeholder-color($color) {
 
   &::-webkit-input-placeholder {
     color: $color;
+    @content;
   }
 
   &:-moz-placeholder {
     color: $color;
+    @content;
   }
 
   &::-moz-placeholder {
     color: $color;
+    @content;
   }
 
   &:-ms-input-placeholder {
     color: $color;
+    @content;
   }
 }
 
