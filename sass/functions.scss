@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'config';
 
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
