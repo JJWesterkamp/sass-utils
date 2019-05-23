@@ -3,6 +3,13 @@
 [View releases](https://github.com/JJWesterkamp/sass-utils/releases)
 
 
+# v2.1.1
+[v2.1.0 ... v2.1.1](https://github.com/JJWesterkamp/sass-utils/compare/v2.1.0...v2.1.1)
+
+**Housekeeping**
+
+- Added changelog file & README link
+- Added .npmignore file
 
 # v2.1.0
 [v2.0.0 ... v2.1.0](https://github.com/JJWesterkamp/sass-utils/compare/v2.0.0...v2.1.0)
@@ -28,7 +35,7 @@
 
 
 
-# v1.1.0 
+# v1.1.0
 [v1.0.0 ... v1.1.0](https://github.com/JJWesterkamp/sass-utils/compare/v1.0.0...v1.1.0)
 
 **Additions**
