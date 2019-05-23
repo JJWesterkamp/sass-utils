@@ -1,7 +1,7 @@
 # @jjwesterkamp/sass-utils
 Generic SCSS function- & mixin-utilities for web projects.
 
-[![npm version](https://badge.fury.io/js/%40jjwesterkamp%2Fsass-utils.svg)](https://badge.fury.io/js/%40jjwesterkamp%2Fsass-utils)
+[![npm version](https://badge.fury.io/js/%40jjwesterkamp%2Fsass-utils.svg)](https://badge.fury.io/js/%40jjwesterkamp%2Fsass-utils) [View changelog](https://github.com/JJWesterkamp/sass-utils/blob/master/CHANGELOG.md)
 
 ## Required SCSS variables
 
