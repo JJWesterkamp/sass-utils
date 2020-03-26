@@ -1,0 +1,8 @@
+@mixin square($size, $display: null) {
+    width: rem-calc($size);
+    height: rem-calc($size);
+
+    @if $display != null {
+        display: $display;
+    }
+}

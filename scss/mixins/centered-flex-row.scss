@@ -1,0 +1,28 @@
+@mixin centered-flex-row(
+    $justify          : center,
+    $align            : center,
+    $wrap             : false,
+    $inline           : false,
+    $children-display : null
+) {
+    @if $inline == true {
+        display: inline-flex
+    } @else {
+        display: flex
+    }
+
+    justify-content: $justify;
+    align-items: $align;
+
+    @if $wrap == true {
+        flex-wrap: wrap
+    } @else {
+        flex-wrap: nowrap
+    }
+
+    @if $children-display != null {
+        > * {
+            display: $children-display;
+        }
+    }
+}

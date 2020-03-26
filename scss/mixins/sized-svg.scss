@@ -1,0 +1,11 @@
+@mixin sized-svg($sizeOrWith, $height: $sizeOrWith, $inline: true) {
+    svg {
+        @if $inline == true { display: inline-block }
+        @else               { display: block }
+
+        width: rem-calc($sizeOrWith);
+        height: rem-calc($height);
+
+        @content;
+    }
+}

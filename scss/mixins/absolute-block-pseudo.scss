@@ -1,0 +1,13 @@
+@mixin absolute-block-pseudo ($pseudo, $parent-position: null) {
+
+    @if $parent-position != null {
+        position: $parent-position;
+    }
+
+    &::#{$pseudo} {
+        position: absolute;
+        display: block;
+        content: "";
+        @content;
+    }
+}

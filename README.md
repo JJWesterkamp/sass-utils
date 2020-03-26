@@ -50,7 +50,7 @@ console> WARNING: 0.5rem 0.75rem 1rem 1.5rem
 ## Mixins
 
 ```scss
-@import '~@jjwesterkamp/sass-utils/sass/mixins';
+@import '~@jjwesterkamp/sass-utils/sass/mixins.index';
 ```
 
 ### `z-index()`
@@ -71,4 +71,22 @@ $z-indices: (
     z-index: 5000;
 }
 ```
+---
+### Mixin | `absolute-block-pseudo`
 
+```scss
+@import '~@jjwesterkamp/sass-utils/sass/mixins/absolute-block-pseudo';
+
+.crumb {
+    @include absolute-block-pseudo(after, relative) {
+        width: 20px;
+        height: 100%;
+        left: 100%;
+        background-image: url("/img/arrow-right.svg");
+    }
+}
+```
+
+## License
+
+The MIT licence (MIT). See the [license file](https://github.com/JJWesterkamp/sass-utils/blob/master/LICENSE) for more information.

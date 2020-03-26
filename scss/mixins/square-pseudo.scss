@@ -1,0 +1,12 @@
+@mixin square-pseudo($pseudo: before, $square-size) {
+
+    width: $square-size;
+
+    &::#{$pseudo} {
+        content: "";
+        display: block;
+        width: 100%;
+        pointer-events: none;
+        padding-top: 100%;
+    }
+}

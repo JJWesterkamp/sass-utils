@@ -1,0 +1,4 @@
+@mixin max-square($size) {
+    max-width: rem-calc($size);
+    max-height: rem-calc($size);
+}

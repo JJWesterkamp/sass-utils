@@ -1,0 +1,4 @@
+@mixin min-square($size) {
+    min-width: rem-calc($size);
+    min-height: rem-calc($size);
+}

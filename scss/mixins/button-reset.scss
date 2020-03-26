@@ -1,0 +1,13 @@
+@mixin button-reset($background-color: transparent) {
+    &,
+    &:hover,
+    &:focus {
+        margin: 0;
+        padding: 0;
+        background-color: $background-color;
+        border: none;
+        outline: none;
+
+        @content;
+    }
+}

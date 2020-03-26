@@ -1,0 +1,25 @@
+@mixin centered-flex-column(
+    $justify : center,
+    $align   : center,
+    $wrap    : false,
+    $IEFix   : true,
+) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+
+    @if $wrap == true {
+        flex-wrap: wrap
+    } @else {
+        flex-wrap: nowrap
+    }
+
+    @if $IEFix == true {
+        > * {
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}

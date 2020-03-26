@@ -1,0 +1,12 @@
+@mixin autofill-style($background-color, $text-color: null) {
+
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px $background-color inset;
+
+        @if $text-color != null {
+            color: $text-color;
+        }
+
+        @content;
+    }
+}
