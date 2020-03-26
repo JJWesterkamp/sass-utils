@@ -1,27 +1,28 @@
 {
-  "name": "@jjwesterkamp/sass-utils",
-  "version": "2.1.1",
-  "description": "Generic SCSS function- & mixin-utilities for web projects.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JJWesterkamp/sass-utils.git"
-  },
-  "keywords": [
-    "Sass",
-    "mixins",
-    "utilities",
-    "library",
-    "checkbox",
-    "radiobutton"
-  ],
-  "author": "Jeffrey Westerkamp",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JJWesterkamp/sass-utils/issues"
-  },
-  "homepage": "https://github.com/JJWesterkamp/sass-utils#readme"
+    "name": "@jjwesterkamp/sass-utils",
+    "version": "2.1.1",
+    "description": "Generic SCSS utilities for web projects.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JJWesterkamp/sass-utils.git"
+    },
+    "keywords": [
+        "sass",
+        "scss",
+        "mixin",
+        "library"
+    ],
+    "author": {
+        "name": "Jeffrey Westerkamp",
+        "url": "https://github.com/JJWesterkamp"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/JJWesterkamp/sass-utils/issues"
+    },
+    "homepage": "https://github.com/JJWesterkamp/sass-utils#readme"
 }
