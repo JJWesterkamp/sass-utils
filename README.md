@@ -1,90 +1,42 @@
-# @jjwesterkamp/sass-utils
-Generic SCSS function- & mixin-utilities for web projects.
+# @jjwesterkamp/sass-utils [![npm version](https://badge.fury.io/js/%40jjwesterkamp%2Fsass-utils.svg)](https://badge.fury.io/js/%40jjwesterkamp%2Fsass-utils)
+**Generic SCSS utilities for web projects.** This package provides several utilities in the form of sass mixins that help with writing common repetitive CSS rule sets. [View changelog](https://github.com/JJWesterkamp/sass-utils/blob/master/CHANGELOG.md).
+## Installation
 
-[![npm version](https://badge.fury.io/js/%40jjwesterkamp%2Fsass-utils.svg)](https://badge.fury.io/js/%40jjwesterkamp%2Fsass-utils) [View changelog](https://github.com/JJWesterkamp/sass-utils/blob/master/CHANGELOG.md)
+Install the package from npm:
 
-## Required SCSS variables
-
-Some variables are required by this package. [This config file](https://github.com/JJWesterkamp/sass-utils/blob/master/sass/config.scss) is imported in both functions.scss and mixins.scss. Example: the function `rem-calc` requires a variable `$rem-base` to exist. To override the default value, define the variable before importing this package:
-
-```scss
-$rem-base: 16px;
-
-@import '~@jjwesterkamp/sass-utils/sass/functions';
+```
+$ npm install --save-dev @jjwesterkamp/sass-utils
 ```
 
-Overriding works the same for all variables.
+## Usage
 
-### `$rem-base`
 
-The base size for pixel-to-rem conversion using the `rem-calc()` mixin.
+### 1. Setup required SCSS variables
 
-### `$z-indices`
-
-This sass map maps user-defined aliases to unitless positive integers denoting corresponding z-index values. This is a dependency of he [`z-index()`](#z-index) mixin.
-
-## Functions
+A few variables are required by this package. Copy [the config file](scss/config.scss) into your project, and modify the variables to your needs. Then import it into your SCSS project:
 
 ```scss
-@import '~@jjwesterkamp/sass-utils/sass/functions';
+@import 'sass-utils.config';
 ```
 
-### `rem-calc()` (from [Foundation v5](https://github.com/zurb/foundation-sites/tree/V5))
+### 2. Import functions & mixins
 
-This function takes a space-separated list of unitless numbers and pixel values, and converts them to `rem` values, based on the `$rem-base` variable.
+To get started quickly import the index files importing all functions and mixins:
 
 ```scss
-// $rem-base: 16px;
+@import 'sass-utils.config';
 
-@warn rem-calc($rem-base);
-console> WARNING: 1rem
-
-@warn rem-calc($rem-base (2 * $rem-base));
-console> WARNING: 1rem 2rem
-
-@warn rem-calc(8 12 16 24);
-console> WARNING: 0.5rem 0.75rem 1rem 1.5rem
+@import '~@jjwesterkamp/sass-utils/scss/functions.index';
+@import '~@jjwesterkamp/sass-utils/scss/mixins.index';
 ```
 
-
-## Mixins
-
-```scss
-@import '~@jjwesterkamp/sass-utils/sass/mixins.index';
-```
-
-### `z-index()`
-
-Use this mixin to apply a z-index value to an element by specifying a property of the `$z-indices` map.
+Alternatively you may import only the specific mixins that you need:
 
 ```scss
-$z-indices: (
-    site-header: 5000,
-);
-
-.site-header {
-    @include z-index(site-header);
-}
-
-// Output:
-.site-header {
-    z-index: 5000;
-}
-```
----
-### Mixin | `absolute-block-pseudo`
-
-```scss
-@import '~@jjwesterkamp/sass-utils/sass/mixins/absolute-block-pseudo';
-
-.crumb {
-    @include absolute-block-pseudo(after, relative) {
-        width: 20px;
-        height: 100%;
-        left: 100%;
-        background-image: url("/img/arrow-right.svg");
-    }
-}
+@import "~@jjwesterkamp/sass-utils/scss/mixins/absolute-block-pseudo";
+@import "~@jjwesterkamp/sass-utils/scss/mixins/absolute-overlay";
+@import "~@jjwesterkamp/sass-utils/scss/mixins/autofill-style";
+// ...
 ```
 
 ## License
