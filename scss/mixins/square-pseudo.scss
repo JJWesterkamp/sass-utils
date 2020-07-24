@@ -1,4 +1,4 @@
-@mixin square-pseudo($pseudo: before, $square-size) {
+@mixin square-pseudo($pseudo: before, $square-size: 0) {
 
     width: $square-size;
 
